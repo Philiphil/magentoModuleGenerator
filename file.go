@@ -90,3 +90,4 @@ func getDiff(oldstate  map[string]string, newstate  map[string]string) (diff map
 	}
 	return
 }
+

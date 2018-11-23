@@ -4,19 +4,7 @@ import (
 	"os"
 	"strings"
 )
-/*
-	cron,router,controler,model,rewrite,bloc,layout
-*/
 
-type Module struct{
-	Archi string
-	Namespace string
-	Name string
-	HasObserver bool
-	IsEventCustom bool
-	Event string
-	HasHelper bool
-}
 func main(){
 	createModule(makeModule());
 	
@@ -70,7 +58,15 @@ func getArchi(m Module)(Module){
 }
 
 func createModule(m Module){
+	inside := m.Archi + string(os.PathSeparator) + m.Namespace + string(os.PathSeparator) + m.Name
+	os.MkdirAll(inside+string(os.PathSeparator)+"etc", 0777);
 /*
-
+	creer archi/namespace/module/etc/config.xml
+	remplir config.xml
+	creer archi../../etc/module/ns_name.xml
+	remplir ns_name.xml
+	
+	faires les autres
 */
+
 }
